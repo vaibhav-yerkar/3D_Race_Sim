@@ -19,7 +19,7 @@
   function init(){
 
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xffbb88);
+    scene.background = new THREE.Color(0xdddddd);
     
     camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
     camera.position.set(0, 5,-10);
@@ -34,7 +34,7 @@
     scene.add(ambientLight);
 
     //directional light
-    const directionalLight = new THREE.DirectionalLight(0xffcc88, 1.8);
+    const directionalLight = new THREE.DirectionalLight(0xddcc88, 1.8);
     directionalLight.position.set(5,10,5).normalize();
     scene.add(directionalLight);
 
@@ -90,9 +90,9 @@
     });
 
     let acceleration = 0;
-    const maxAcceleration = 0.6;
-    const accelerationStep = 0.01;
-    const decelerationStep = 0.007;
+    const maxAcceleration = 0.8;
+    const accelerationStep = 0.03;
+    const decelerationStep = 0.008;
 
     // Start the animation loop
     function animate() {
